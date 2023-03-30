@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial: Box Shadow and Text Shadow</title>
+</head>
+<style>
+    .container{
+        display: flex;
+    }
+    .card{
+        padding: 23px 12px;
+        margin: 23px 12px;
+        /* border: 2px solid red; */
+        background-color: rgb(184, 243, 223);
+        
+
+        /* cheat sheet */
+        /* box-shadow: offset-x offset-y blurr-shadow spread-shadow color; */
+        /* box-shadow: inset offset-x offset-y blurr-shadow spread-shadow color; */
+
+        /* box-shadow: -4px 6px 10px 1px red; */
+        /* box-shadow: -4px 6px red; */
+        /* box-shadow: inset -14px 80px red; */
+        box-shadow: -4px 6px red, -10px 9px green;
+    }
+    .card h2{
+        text-shadow: 4px 4px 3px white;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is Python Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam alias laborum animi, quasi quis, adipisci et ratione voluptas suscipit modi aliquid qui molestiae quo nobis tempore recusandae, sunt quisquam est provident inventore pariatur necessitatibus.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is Java course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam alias laborum animi, quasi quis, adipisci et ratione voluptas suscipit modi aliquid qui molestiae quo nobis tempore recusandae, sunt quisquam est provident inventore pariatur necessitatibus.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>This is PHP course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam alias laborum animi, quasi quis, adipisci et ratione voluptas suscipit modi aliquid qui molestiae quo nobis tempore recusandae, sunt quisquam est provident inventore pariatur necessitatibus.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
