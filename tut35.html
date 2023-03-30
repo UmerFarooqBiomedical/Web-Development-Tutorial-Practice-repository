@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables & Custom properties</title>
+    <style>
+        :root{
+            --box-color: violet;
+            --safe-color: green;
+            --danger-color: red;
+            --waiting-color: yellow;
+            --primary-color: blue;
+            --box-width: 200px;
+        }
+        .box{
+            
+            width: var(--box-width);
+            height: 200px;
+            background-color: var(--primary-color);
+            border: 6px solid var(--waiting-color);
+            margin: 2px 9px;
+            box-shadow: 3px 4px var(--danger-color);
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--box-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
