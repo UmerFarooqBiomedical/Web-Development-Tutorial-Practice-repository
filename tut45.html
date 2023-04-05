@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Media Queries with CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(100px, 300px)); */
+            gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+        nav{
+            grid-area: navbar;
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+        }
+        section{
+            grid-area: section;
+            padding: 10px;
+            margin: 10px;
+        }
+        aside{
+            grid-area: aside;
+            padding: 10px;
+            margin: 10px;
+        }
+        footer{
+            display: flex;
+            grid-area: footer;
+            padding: 10px;
+            margin: 10px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .bdr {
+            border: 2px solid black;
+            background-color: wheat;
+            padding: 23px;
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+
+                background-color: blue;
+            }
+            .container {
+            
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+        }
+        }
+
+        @media (max-width:500px) and (min-width:300px) {
+            body {
+
+                background-color: blueviolet;
+            }
+            span {
+                display: block;
+            }
+        }
+
+        @media (max-width:800px) and (min-width:500px) {
+            body {
+
+                background-color: orangered;
+            }
+        }
+
+        @media (min-width:800px) {
+            body {
+
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="bdr">
+            <span> Home </span>
+            <span> About </span>
+            <span> Services </span>
+            <span> Contact</span>
+        </nav>
+
+
+        <section class="bdr">
+            <h2>Learn CSS in Urdu</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, repudiandae obcaecati accusamus earum nisi iste eaque cum dignissimos alias modi voluptates deleniti nobis et ipsum maiores nam. Repellendus quibusdam officiis deleniti ipsam quis suscipit nisi facilis nihil iure rerum! Beatae earum aspernatur quae qui optio provident consectetur sed facere iste sapiente culpa placeat deleniti ducimus illo, obcaecati molestiae vel tempora debitis cum cumque enim necessitatibus molestias? Expedita optio veritatis sit nihil dicta possimus voluptatum sequi, odio hic dolore animi commodi eveniet aspernatur voluptates corporis omnis repudiandae assumenda beatae dolorem debitis minus quaerat. Laboriosam natus praesentium asperiores dolorum. Quo temporibus, ipsam necessitatibus maxime repellat mollitia praesentium quaerat. Est, doloremque consequatur officiis repellendus dolorem explicabo fugit velit odit distinctio quaerat omnis veniam voluptatum, deleniti tempore necessitatibus neque excepturi totam nobis assumenda fuga, non ut! Ducimus omnis, mollitia voluptatum facilis veniam odio fuga totam cumque? Reprehenderit delectus quisquam eos laudantium similique, libero modi obcaecati quod nulla non error ea eum dolorem amet, doloribus asperiores debitis dignissimos? Autem officiis iste veritatis voluptas incidunt fugiat quae ullam! Suscipit magni praesentium facilis. Aspernatur ut tempore eius excepturi, necessitatibus impedit sunt exercitationem reprehenderit ratione! Quia perferendis eum ipsa culpa accusamus obcaecati omnis laborum expedita, iure maiores ipsum!</p>
+        </section>
+
+        <aside class="bdr">
+            <h1>More about us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">
+        Disclaimer    Privacy Policy    Contact Us     Terms & Conditions Copyright 2023 @UmerPythonwala
+    </footer>
+
+</body>
+
+</html>
